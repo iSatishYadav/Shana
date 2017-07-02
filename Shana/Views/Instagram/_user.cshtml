@@ -1,0 +1,23 @@
+﻿@model Shana.Models.Instargam.InstagramUser
+<div>
+    <hr />
+    <div class="media">
+        <div class="media-right">
+            <div class="col-sm-4">
+                <img class="media-object right" src="@Html.DisplayFor( x=> x.ProfilePicture)">
+            </div>
+            <div class="col-sm-8">
+                <h3 class="media-heading">@Html.DisplayFor(x => x.FullName)</h3>
+                <h4>(@Html.DisplayFor(x => x.Username))</h4>
+                @Html.DisplayFor(x => x.Bio)
+                @if (!string.IsNullOrEmpty(Model.Website))
+                {
+                    <br />
+                    <a href="@Html.DisplayFor(x => x.Website)">@Html.DisplayFor(x => x.Website)</a>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+

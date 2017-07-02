@@ -1,0 +1,10 @@
+﻿@model Shana.Models.Instargam.InstagramUser
+
+@{
+    ViewBag.Title = "Users";
+}
+@Html.Partial("_user", Model)
+<hr />
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
